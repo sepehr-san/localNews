@@ -31,12 +31,17 @@ h2 {
 
 /* News card container */
 .news-card {
-  background-color: #fff; /* White background for card */
-  border-radius: 8px; /* Subtle rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  max-width: 600px; /* Constrain width for readability */
-  margin: 0 auto 20px; /* Center and space between cards */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 20px;
   padding: 20px;
+  display: none; /* All cards hidden by default */
+}
+
+.news-card.active {
+  display: block; /* Only active cards are visible */
 }
 
 /* News title */
@@ -73,6 +78,58 @@ h2 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+
+/* Tooltip styles */
+.tooltip {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Active state for fade-in */
+.tooltip.active {
+  opacity: 1;
+}
+
+/* Pagination styles */
+.pagination {
+  text-align: center;
+  margin:ceğ 20px 0;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #2980b9;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.pagination a.active {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   h1 {
@@ -97,5 +154,8 @@ h2 {
   }
   .img-container img {
     max-width: 100%; /* Ensure image scales on small screens */
+  }
+  .news-card .tooltip {
+    font-size: 0.8rem; /* Smaller text on mobile */
   }
 }

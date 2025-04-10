@@ -15,18 +15,39 @@
 <body>
   <h1>اخباراخیر</h1>
   <h2>چه خبر در محل؟</h2>
-  <div class="news-card">
-    <h3 class="news-title">سقوط کوچه هژدهم</h3>
-    <h3 class="news-date">پنج‌شنبه ۲۱ فروردین ۱۴۰۴</h3>
-    <p class="news-description">فرستاده اخیر طبق مشاهدات میدانی متوجه به مورد عجیبی درباره یک پست برق‌رسانی و تابلوی
-      کوچه شد. پست به همراه تابلو
-      کج شده بود و مورد سقوط قرار گرفته بود. تحقیقات همچنان درباره علل این سقوط به نتیجه نرسیده است و به محض کسب اطلاعات
-      بیشتر، در همین مکان اطلاع‌رسانی خواهد شد.</p>
-    <div class="img-container">
-      <img src="imgs/fall-of-post.jpeg" alt="یک تیر برق که کج شده است.">
+
+  <div class="news-container">
+    <!-- Card 1 -->
+    <div class="news-card tooltip-trigger" id="card-1" data-tooltip="جزئیات بیشتر درباره سقوط در حال بررسی است.">
+      <h3 class="news-title">سقوط کوچه هژدهم</h3>
+      <h3 class="news-date">پنج‌شنبه ۲۱ فروردین ۱۴۰۴</h3>
+      <p class="news-description">فرستاده اخیر طبق مشاهدات میدانی متوجه به مورد عجیبی درباره یک پست برق‌رسانی و تابلوی
+        کوچه شد. پست به همراه تابلو
+        کج شده بود و مورد سقوط قرار گرفته بود. تحقیقات همچنان درباره علل این سقوط به نتیجه نرسیده است و به محض کسب
+        اطلاعات
+        بیشتر، در همین مکان اطلاع‌رسانی خواهد شد.</p>
+      <div class="img-container">
+        <img src="imgs/fall-of-post.jpeg" alt="یک تیر برق که کج شده است." loading="lazy">
+      </div>
     </div>
+    <!-- Card 2 -->
+    <div class="news-card tooltip-trigger" id="card-2" data-tooltip="بی‌خبر محروم ماند از لطف حق">
+      <h3 class="news-title">شروع همه چیز</h3>
+      <h3 class="news-date">پنج‌شنبه ۲۱ فروردین ۱۴۰۴</h3>
+      <p class="news-description">
+        با افتخار اعلام می‌کنیم که جدیدترین اخبار محل را در این محل پیدا خواهید کرد. کافیست روی لایک و سابسکرایب کلیک
+        کنید. روز خوبی داشته باشید.</p>
+      <div class="img-container">
+        <img src="imgs/sabato.jpeg" alt="تونلی از نور." loading="lazy">
+      </div>
+    </div>
+    
   </div>
 
+  <!-- Pagination container -->
+  <div class="pagination"></div>
+
+  <script src="scripts.js"></script>
 </body>
 
 </html>
