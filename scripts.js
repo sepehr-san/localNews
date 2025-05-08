@@ -12,15 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const footer = document.getElementById("myFooter");
   let lastScrollTop = 0;
+  const scrollThreshold = 200; // Adjust this value
 
   window.addEventListener("scroll", function () {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
+    if (scrollTop > scrollThreshold && scrollTop > lastScrollTop) {
+      // Scrolling down and past the threshold
       footer.classList.add("footer-hidden");
     } else {
-      // Scrolling up
+      // Scrolling up or before the threshold
       footer.classList.remove("footer-hidden");
     }
 
