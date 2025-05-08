@@ -148,6 +148,7 @@ footer {
   left: 0;
   width: 100%;
   height: 2.5rem; /* Adjust as needed */
+  transition: transform 0.3s ease-in-out; /* For smooth animation */
 
   /* Make it transparent */
   background-color: rgba(
@@ -171,6 +172,12 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+.footer-hidden {
+  transform: translateY(100%); /* Slide it out of view */
+}
+
+
 footer a {
   color: #547792;
   text-decoration: none;
